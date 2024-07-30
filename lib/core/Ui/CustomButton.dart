@@ -1,3 +1,4 @@
+import 'package:dev_challenge_2/core/Theme/AppColors.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -9,15 +10,15 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: onpress,
-      color: Colors.blue,
-      minWidth: 300,
+      color: AppColors.buttonColor,
+      minWidth: 327,
       height: 50,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(16),
     ),
       child: const Text(
           'Login',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w700),
       ));
   }
 }
