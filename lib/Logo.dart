@@ -31,7 +31,7 @@ class LogoS extends StatelessWidget {
             onpress: () {
               Navigator.pushReplacement(
                 context,
-                FadePageTransition(page: const HomeScreen()),
+                FadeSlidePageTransition(page: const HomeScreen()),
               );
             },
           ),
