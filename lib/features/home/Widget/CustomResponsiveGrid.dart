@@ -9,7 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
 class CustomResponsiveGrid extends StatelessWidget {
-  const CustomResponsiveGrid({super.key});
+  final String title;
+  const CustomResponsiveGrid({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +41,7 @@ class CustomResponsiveGrid extends StatelessWidget {
                   bottom: 44,
                   left: 16,
                   top: 88,   
-                  child: Text('Asian white noodle with extra seafood',
+                  child: Text(title,
                       style: TextStyle(
                           color: AppColors.white,
                           fontSize: 18.sp,
