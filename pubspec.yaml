@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_screenutil: ^5.9.3
   responsive_grid: ^2.4.4
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.6
 
 dev_dependencies:
   flutter_test:
