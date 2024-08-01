@@ -1,4 +1,7 @@
+import 'package:dev_challenge_2/core/Theme/AppSizes.dart';
 import 'package:dev_challenge_2/features/Search%20Screen/Widget/CustomSerachBar.dart';
+import 'package:dev_challenge_2/features/home/Widget/BuildCategory.dart';
+import 'package:dev_challenge_2/features/home/Widget/CustomNameSection.dart';
 import 'package:flutter/material.dart';
 
 
@@ -15,13 +18,19 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Search'),
+        title: const Text('Search',style: TextStyle(fontWeight: FontWeight.bold),),
         
       ),
       body: const SingleChildScrollView(
         child: Column(
           children: [
-            CustomSearchBar()
+            CustomSearchBar(),
+            SizedBox(height: AppSizes.height,),
+            BuildCategory(),    
+             CustomNameSection( 
+            tit: 'View All', 
+            NSection: ' Recipes',
+          ),
           ]
           
         ),

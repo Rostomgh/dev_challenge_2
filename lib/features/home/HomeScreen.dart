@@ -1,6 +1,6 @@
 import 'package:dev_challenge_2/core/Theme/AppColors.dart';
 import 'package:dev_challenge_2/core/Theme/AppSizes.dart';
-import 'package:dev_challenge_2/features/home/Widget/Build%20Category.dart';
+import 'package:dev_challenge_2/features/home/Widget/BuildCategory.dart';
 import 'package:dev_challenge_2/features/home/Widget/CustomCategoryContnair.dart';
 import 'package:dev_challenge_2/features/home/Widget/CustomNameSection.dart';
 import 'package:dev_challenge_2/features/home/Widget/CustomResponsiveGrid.dart';
@@ -46,13 +46,15 @@ class _HomeScreenState extends State<HomeScreen> {
             height: AppSizes.hbtween,
           ),
           const CustomNameSection(
+            tit: 'See All',
             NSection: 'Category',
           ),
           const SizedBox(
             height: AppSizes.hcategory,
           ),
           const BuildCategory() ,
-          const CustomNameSection(
+          const CustomNameSection( 
+            tit: 'See All',
             NSection: ' Recipes',
           ),
 

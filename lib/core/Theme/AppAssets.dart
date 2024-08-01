@@ -11,4 +11,5 @@ class AppAssets {
   static const String grid='assets/grid.png';
   static const String start='assets/start.png';
   static const String buy='assets/buy.png';
+  static const String choice='assets/choice.png';
 }
