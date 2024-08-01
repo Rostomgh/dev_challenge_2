@@ -23,9 +23,16 @@ class CustomGridChoice extends StatelessWidget {
               xs: 12,
               child: Container(
                 decoration: BoxDecoration(
-                  border: Border.all(color: AppColors.layout),
                   color: AppColors.white,
                   borderRadius: BorderRadius.circular(10.r),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
                 ),
                 height: 105.h,
                 width: AppSizes.wigridS,
@@ -47,17 +54,17 @@ class CustomGridChoice extends StatelessWidget {
                             descp,
                             style: TextStyle(
                               color: AppColors.textColor,
-                              fontSize: 16.sp,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.w800,
                             ),
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),
-                          const SizedBox(height: 35.0),
+                          const SizedBox(height: 20.0),
                           Row(
                             children: [
                               CircleAvatar(
-                                radius: 20.w,
+                                radius: 14.w,
                                 backgroundImage:
                                     const AssetImage(AppAssets.profile),
                               ),
@@ -75,7 +82,10 @@ class CustomGridChoice extends StatelessWidget {
                         ],
                       ),
                     ),
-                    
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(AppAssets.arrow, height: 24.h, width: 24.w),
+                    ),
                   ],
                 ),
               ),
