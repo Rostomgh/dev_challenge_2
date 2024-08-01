@@ -9,4 +9,6 @@ class AppAssets {
   static const String user='assets/user.png';
   static const String notif='assets/notif.png';
   static const String grid='assets/grid.png';
+  static const String start='assets/start.png';
+  static const String buy='assets/buy.png';
 }

@@ -8,24 +8,27 @@ class CustomNameSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(NSection,
+    return Padding(
+      padding: const EdgeInsets.all(6.0),
+      child: Row(
+        children: [
+          Text(NSection,
+              style: TextStyle(
+                  fontSize: 22.sp,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.textColor)),
+          SizedBox(
+            width: 195.w,
+          ),
+          Text(
+            'See All',
             style: TextStyle(
-                fontSize: 22.sp,
-                fontWeight: FontWeight.bold,
-                color: AppColors.textColor)),
-        SizedBox(
-          width: 195.w,
-        ),
-        Text(
-          'See All',
-          style: TextStyle(
-              color: AppColors.primaryColor,
-              fontWeight: FontWeight.w800,
-              fontSize: 14.sp),
-        )
-      ],
+                color: AppColors.primaryColor,
+                fontWeight: FontWeight.w800,
+                fontSize: 14.sp),
+          )
+        ],
+      ),
     );
   }
 }

@@ -8,8 +8,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
 class CustomResponsiveGrid extends StatelessWidget {
+  final String time;
   final String title;
-  const CustomResponsiveGrid({super.key, required this.title});
+  const CustomResponsiveGrid({super.key, required this.title, required this.time});
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +29,19 @@ class CustomResponsiveGrid extends StatelessWidget {
               alignment: Alignment.center,
               child: Stack(
                 children: [
-                    Positioned(
-                  child: Image.asset(AppAssets.line),
-                ),
                   Positioned(
-                    left: 25,
-                    top: 41,
-                    child: Image.asset(AppAssets.grid,width: 14.w,height: 14.h,fit: BoxFit.cover,)),
-                Positioned(
+                    child: Image.asset(AppAssets.line),
+                  ),
+                  Positioned(
+                      left: 25,
+                      top: 41,
+                      child: Image.asset(
+                        AppAssets.grid,
+                        width: 14.w,
+                        height: 14.h,
+                        fit: BoxFit.cover,
+                      )),
+                  Positioned(
                     right: 4,
                     top: 5,
                     child: Container(
@@ -62,13 +68,28 @@ class CustomResponsiveGrid extends StatelessWidget {
                   ),
                   const Positioned(
                     left: 13,
-                    bottom:4 ,
+                    bottom: 4,
                     right: 135,
                     child: CustomRowName(
                       name: 'James Spader',
                     ),
                   ),
-                  
+                  Positioned(
+                    right: 10,
+                    bottom: 10,
+                    child: Row(
+                      children: [
+                        const Icon(Icons.lock_clock,color: AppColors.white,),
+                        Text(
+                          '$time min',
+                          style: TextStyle(
+                              color: AppColors.white,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               )),
         ),
