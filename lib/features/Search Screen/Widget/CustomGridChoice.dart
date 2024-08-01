@@ -1,63 +1,88 @@
 import 'package:dev_challenge_2/core/Theme/AppAssets.dart';
 import 'package:dev_challenge_2/core/Theme/AppColors.dart';
 import 'package:dev_challenge_2/core/Theme/AppSizes.dart';
-import 'package:dev_challenge_2/features/home/Widget/CustomRowName.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 
 class CustomGridChoice extends StatelessWidget {
+  final String name;
   final String descp;
-  const CustomGridChoice({super.key, required this.descp});
+  final Function()? onpress;
+  const CustomGridChoice({super.key, required this.descp, required this.name, this.onpress});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: InkWell(
-          child: ResponsiveGridRow(children: [
+      padding: const EdgeInsets.all(10.0),
+      child: InkWell(
+        onTap: onpress,
+        child: ResponsiveGridRow(
+          children: [
             ResponsiveGridCol(
-                xs: 10,
-                child: Container(
-                    decoration: BoxDecoration(
-                      color: AppColors.white,
-                      borderRadius: BorderRadius.circular(10.r).w,
+              xs: 12,
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: AppColors.layout),
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.circular(10.r),
+                ),
+                height: 105.h,
+                width: AppSizes.wigridS,
+                alignment: Alignment.center,
+                child: Row(
+                  children: [
+                    Image.asset(
+                      AppAssets.choice,
+                      height: 84.h,
+                      width: 100.w,
                     ),
-                    height: 100.h,
-                    width: AppSizes.wigridS,
-                    alignment: Alignment.center,
-                    child: Row(
-                      children: [
-                        Image.asset(
-                          AppAssets.choice,
-                          height: 84.h,
-                          width: 100.w,
-                        ),
-                        const SizedBox(
-                          height: AppSizes.ten,
-                        ),
-                        Column(
-                          children: [
-                            Text(
-                              descp,
-                              style: TextStyle(
-                                  color: AppColors.textColor,
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.w800),
+                    const SizedBox(width: AppSizes.ten),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            descp,
+                            style: TextStyle(
+                              color: AppColors.textColor,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w800,
                             ),
-                            const CustomRowName(
-                              name: 'James Spader',
-                            ),
-                          ],
-                        ),
-                        Spacer(),
-                        const Icon(
-                          Icons.arrow_back,
-                        )
-                      ],
-                    )))
-          ]),
-        ));
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          const SizedBox(height: 35.0),
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 20.w,
+                                backgroundImage:
+                                    const AssetImage(AppAssets.profile),
+                              ),
+                              SizedBox(width: 10.w),
+                              Text(
+                                name,
+                                style: TextStyle(
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w400,
+                                  color: const Color(0xff97A2B0),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomRowName extends StatelessWidget {
   final String name;
-  const CustomRowName({super.key, required this.name});
+  const  CustomRowName({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {

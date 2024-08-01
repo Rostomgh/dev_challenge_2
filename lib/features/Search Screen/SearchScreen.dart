@@ -1,4 +1,5 @@
 import 'package:dev_challenge_2/core/Theme/AppSizes.dart';
+import 'package:dev_challenge_2/features/Search%20Screen/Widget/CustomGridChoice.dart';
 import 'package:dev_challenge_2/features/Search%20Screen/Widget/CustomSerachBar.dart';
 import 'package:dev_challenge_2/features/home/Widget/BuildCategory.dart';
 import 'package:dev_challenge_2/features/home/Widget/CustomNameSection.dart';
@@ -31,6 +32,8 @@ class _SearchScreenState extends State<SearchScreen> {
             tit: 'View All', 
             NSection: ' Recipes',
           ),
+          SizedBox(height: AppSizes.height,),
+          CustomGridChoice(descp: 'Easy homemade beef burger', name: 'James Spader'),
           ]
           
         ),
