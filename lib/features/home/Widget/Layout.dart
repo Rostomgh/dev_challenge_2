@@ -20,8 +20,10 @@ class LayoutScreen extends StatelessWidget {
             backgroundColor: Theme.of(context).colorScheme.onPrimary,
             elevation: 4.0,
             selectedIndex: cubit.currentIndex,
+            
             onDestinationSelected: (value) {
-              cubit.changeLayout(value);
+            
+              cubit.changeLayout(value, context);
             },
             shadowColor: Colors.black.withOpacity(0.5),
             indicatorColor: Colors.transparent,

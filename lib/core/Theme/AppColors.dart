@@ -10,4 +10,5 @@ class AppColors {
   static const Color white = Color(0xffffffff);
   static const Color layout = Colors.grey;
   static const Color Category = Color(0xffF1F5F5);
+  static const Color SearchBarColor = Color(0xffE6EBF2);
 }
