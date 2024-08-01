@@ -3,6 +3,7 @@ import 'package:dev_challenge_2/core/Theme/AppSizes.dart';
 import 'package:dev_challenge_2/core/Ui/Animation/TransitionAnimationRoute.dart';
 import 'package:dev_challenge_2/core/Ui/CustomButton.dart';
 import 'package:dev_challenge_2/features/home/HomeScreen.dart';
+import 'package:dev_challenge_2/features/home/Widget/Layout.dart';
 import 'package:flutter/material.dart';
 
 class LogoS extends StatelessWidget {
@@ -31,7 +32,7 @@ class LogoS extends StatelessWidget {
             onpress: () {
               Navigator.pushReplacement(
                 context,
-                FadeSlidePageTransition(page: const HomeScreen()),
+                FadeSlidePageTransition(page: const LayoutScreen()),
               );
             },
           ),

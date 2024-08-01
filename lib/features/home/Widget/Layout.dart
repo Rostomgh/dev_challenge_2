@@ -48,11 +48,7 @@ class LayoutScreen extends StatelessWidget {
                 label: 'Search',
               ),
               NavigationDestination(
-                icon: CircleAvatar(
-                  radius: 28,
-                  backgroundColor: Theme.of(context).colorScheme.secondary,
-                  child: Image.asset(AppAssets.cook, height: 20.h),
-                ),
+                icon: Image.asset(AppAssets.cook, height: 110.h,width: 110.w,),
                 label: '',
               ),
               NavigationDestination(
