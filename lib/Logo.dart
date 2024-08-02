@@ -1,7 +1,7 @@
 import 'package:dev_challenge_2/core/Theme/AppColors.dart';
 import 'package:dev_challenge_2/core/Theme/AppSizes.dart';
 import 'package:dev_challenge_2/core/Ui/Animation/TransitionAnimationRoute.dart';
-import 'package:dev_challenge_2/core/Ui/CustomButton.dart';
+import 'package:dev_challenge_2/features/DetailsScreen/Widget/CustomButton.dart';
 import 'package:dev_challenge_2/features/home/HomeScreen.dart';
 import 'package:dev_challenge_2/features/home/Widget/Layout.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +29,7 @@ class LogoS extends StatelessWidget {
             height: AppSizes.hbtween,
           ),
           CustomButton(
+            colorC: AppColors.buttonColor,
             onpress: () {
               Navigator.pushReplacement(
                 context,

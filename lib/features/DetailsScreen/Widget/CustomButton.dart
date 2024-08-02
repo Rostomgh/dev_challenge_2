@@ -4,14 +4,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
   final Function()? onpress;
+  final Color colorC;
 
-  const CustomButton({super.key, this.onpress});
+  const CustomButton({super.key, this.onpress, required this.colorC});
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: onpress,
-      color: AppColors.buttonColor,
+      color: colorC,
       minWidth: 327,
       height: 50,
       shape: RoundedRectangleBorder(
