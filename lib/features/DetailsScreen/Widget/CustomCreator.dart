@@ -16,11 +16,16 @@ class CustomCreator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        SizedBox(width: 15.w,),
         CircleAvatar(
           radius: 20.w,
           backgroundImage: AssetImage(picCreator),
         ),
+        SizedBox(
+          width: 20.w,
+        ),
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               NCreator,

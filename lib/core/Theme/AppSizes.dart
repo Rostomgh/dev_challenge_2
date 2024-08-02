@@ -9,4 +9,5 @@ class AppSizes {
   static const double ten = 10;
   static const double Trich = 6;
   static const double row=41;
+   static const double bottomSheetHeight = 400.0;
 }

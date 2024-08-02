@@ -1,8 +1,8 @@
 import 'package:dev_challenge_2/core/Theme/AppAssets.dart';
+import 'package:dev_challenge_2/core/Theme/AppSizes.dart';
 import 'package:dev_challenge_2/core/Ui/Animation/BottomSheet.dart';
 import 'package:dev_challenge_2/features/DetailsScreen/Widget/CustomBuildBottomSheet.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({super.key});
@@ -14,21 +14,38 @@ class DetailsScreen extends StatefulWidget {
 class _DetailsState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-          Image(
-            image: AssetImage(
+    return Scaffold(
+      body: Stack(
+        children: [
+          // Background image
+          Positioned.fill(
+            child: Image.asset(
               AppAssets.details,
+              fit: BoxFit.cover, 
             ),
           ),
-          Positioned.fill(
-            
-            
-            child: MyDraggableSheet(child:CustomBottomSheet() ))
-        
-        ]),
+          // Back button
+          Positioned(
+            top: 40.0, 
+            left: 20.0, 
+            child: IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.black), 
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ),
+          // Bottom sheet
+          const Align(
+            alignment: Alignment.bottomCenter,
+            child: SizedBox(
+              height: AppSizes.bottomSheetHeight, 
+              child: MyDraggableSheet(
+                child: CustomBottomSheet(),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -8,40 +8,43 @@ class BuildRowStatic extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Row(
-          children: [
-            CustomContainerHealthy(
-              static: '65g carbs',
-              imgP: AppAssets.carbs,
-            ),
-            SizedBox(
-              width: AppSizes.row,
-            ),
-            CustomContainerHealthy(
-              static: '27g proteins',
-              imgP: AppAssets.protien,
-            ),
-          ],
-        ),
-        SizedBox(height: AppSizes.height,),
-        Row(
-          children: [
-            CustomContainerHealthy(
-              static: '120 Kcal',
-              imgP: AppAssets.kcal,
-            ),
-            SizedBox(
-              width: AppSizes.row,
-            ),
-            CustomContainerHealthy(
-              static: '91g fats',
-              imgP: AppAssets.fat,
-            ),
-          ],
-        ),
-      ],
+    return const Padding(
+      padding: EdgeInsets.all(18.0),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              CustomContainerHealthy(
+                static: '65g carbs',
+                imgP: AppAssets.carbs,
+              ),
+              SizedBox(
+                width: AppSizes.row,
+              ),
+              CustomContainerHealthy(
+                static: '27g proteins',
+                imgP: AppAssets.protien,
+              ),
+            ],
+          ),
+          SizedBox(height: AppSizes.height,),
+          Row(
+            children: [
+              CustomContainerHealthy(
+                static: '120 Kcal',
+                imgP: AppAssets.kcal,
+              ),
+              SizedBox(
+                width: AppSizes.row,
+              ),
+              CustomContainerHealthy(
+                static: '91g fats',
+                imgP: AppAssets.fat,
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
