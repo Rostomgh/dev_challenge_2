@@ -23,7 +23,10 @@ class _DetailsState extends State<DetailsScreen> {
               AppAssets.details,
             ),
           ),
-          Positioned.fill(child: MyDraggableSheet(child:CustomBottomSheet() ))
+          Positioned.fill(
+            
+            
+            child: MyDraggableSheet(child:CustomBottomSheet() ))
         
         ]),
       ),
