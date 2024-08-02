@@ -1,6 +1,7 @@
 import 'package:dev_challenge_2/core/Theme/AppSizes.dart';
 import 'package:dev_challenge_2/core/Ui/Animation/TransitionAnimationRoute.dart';
 import 'package:dev_challenge_2/features/DetailsScreen/DetailesScreen.dart';
+import 'package:dev_challenge_2/features/Search%20Screen/Widget/BuildPopular.dart';
 import 'package:dev_challenge_2/features/Search%20Screen/Widget/CustomGridChoice.dart';
 import 'package:dev_challenge_2/features/Search%20Screen/Widget/CustomSerachBar.dart';
 import 'package:dev_challenge_2/features/home/Widget/BuildCategory.dart';
@@ -39,13 +40,20 @@ class _SearchScreenState extends State<SearchScreen> {
             const SizedBox(
               height: AppSizes.height,
             ),
+            const BuildPopular(),
+
+            const SizedBox(height: AppSizes.hbtween,),
+              const CustomNameSection(
+              tit: 'View All',
+              NSection: 'Editor’s',
+            ),
             CustomGridChoice(
                 descp: 'Easy homemade beef burger',
                 name: 'James Spader',
                 onpress: () {
                   Navigator.pushReplacement(
                 context,
-                FadeSlidePageTransition(page:DetailsScreen())
+                FadeSlidePageTransition(page:const DetailsScreen())
               );
                 }),
           ]),

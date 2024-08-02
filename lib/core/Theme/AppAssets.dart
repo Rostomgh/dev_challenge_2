@@ -13,4 +13,8 @@ class AppAssets {
   static const String buy='assets/buy.png';
   static const String choice='assets/choice.png';
   static const String arrow ='assets/arrow.png';
+  static const String plat1='assets/plat1.png';
+  static const String plat2='assets/plat2.png';
+  static const String plat3='assets/plat3.png';
+  static const String details='assets/details.png';
 }
