@@ -29,6 +29,7 @@ class LogoS extends StatelessWidget {
             height: AppSizes.hbtween,
           ),
           CustomButton(
+            textB: 'Login',
             colorC: AppColors.buttonColor,
             onpress: () {
               Navigator.pushReplacement(

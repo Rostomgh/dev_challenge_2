@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomNameSection extends StatelessWidget {
   final String NSection;
-  final String tit;
-  const CustomNameSection({super.key, required this.NSection, required this.tit});
+  final String ? tit;
+  const CustomNameSection({super.key, required this.NSection,  this.tit});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class CustomNameSection extends StatelessWidget {
             width: 195.w,
           ),
           Text(
-            tit,
+            tit!,
             style: TextStyle(
                 color: AppColors.primaryColor,
                 fontWeight: FontWeight.w800,
