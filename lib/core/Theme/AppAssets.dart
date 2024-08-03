@@ -21,4 +21,5 @@ class AppAssets {
   static const String carbs='assets/carbs.png';
   static const String fat='assets/fat.png';
   static const String kcal='assets/kcal.png';
+  static const String gridP='assets/gridpop.png';
 }

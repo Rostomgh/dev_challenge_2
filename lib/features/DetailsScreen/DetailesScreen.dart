@@ -21,17 +21,17 @@ class _DetailsState extends State<DetailsScreen> {
           Positioned.fill(
             child: Image.asset(
               AppAssets.details,
-              fit: BoxFit.cover, 
+              fit: BoxFit.cover,
             ),
           ),
           // Back button
           Positioned(
-            top: 40.0, 
-            left: 20.0, 
+            top: 40.0,
+            left: 20.0,
             child: IconButton(
-              icon: const Icon(Icons.arrow_back, color: Colors.black), 
+              icon: const Icon(Icons.arrow_back, color: Colors.black),
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.pushNamed(context, '/layout');
               },
             ),
           ),
@@ -39,7 +39,7 @@ class _DetailsState extends State<DetailsScreen> {
           const Align(
             alignment: Alignment.bottomCenter,
             child: SizedBox(
-              height: AppSizes.bottomSheetHeight, 
+              height: AppSizes.bottomSheetHeight,
               child: MyDraggableSheet(
                 child: CustomBottomSheet(),
               ),

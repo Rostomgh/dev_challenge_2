@@ -1,5 +1,6 @@
 import 'package:dev_challenge_2/Logo.dart';
 import 'package:dev_challenge_2/core/Router/ErrorRoute.dart';
+import 'package:dev_challenge_2/features/Search%20Screen/SearchScreen.dart';
 import 'package:dev_challenge_2/features/home/HomeScreen.dart';
 import 'package:dev_challenge_2/features/home/Widget/Layout.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,8 @@ class AppRoute {
         return MaterialPageRoute(builder: (context) => const HomeScreen());
       case '/layout':
         return MaterialPageRoute(builder: (context) => const LayoutScreen());
+      case '/search':
+        return MaterialPageRoute(builder: (context) => const SearchScreen());
       default:
         return MaterialPageRoute(builder: (context) => const ErrorRoute());
     }

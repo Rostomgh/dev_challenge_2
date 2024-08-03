@@ -12,7 +12,7 @@ class BuildIngred extends StatelessWidget {
       children: [
         CustomContainerIngred(
           img: AppAssets.nodle,
-          name: 'Chips',
+          name: 'TorChips',
         ),
         SizedBox(height: AppSizes.ten),
         CustomContainerIngred(
@@ -32,7 +32,7 @@ class BuildIngred extends StatelessWidget {
         SizedBox(height: AppSizes.ten),
         CustomContainerIngred(
           img: AppAssets.nodle,
-          name: 'Onions',
+          name: 'ROnions',
         ),
         ],
     );
